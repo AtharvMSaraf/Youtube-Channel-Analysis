@@ -127,9 +127,14 @@ def data_prepro(df):
     numerical_columns = ['viewCount', 'likeCount', 'favouriteCount', 'commentCount']
     df[numerical_columns] = df[numerical_columns].apply(pd.to_numeric,axis = 1)
     print(df.dtypes)
+
+    # next step extract weekday from published date
+
+
 if __name__ == "__main__":
     api_service_name = "youtube"
     api_version = "v3"
+
 
     # Get credentials and create an API client
     youtube = build(
